@@ -14,4 +14,20 @@ Using Stacked Hourglass Network for Vetebra boundary points detection, and then 
    (2) 各個curve的apex, upper endplate, lower endplate 以及對應的Cobb angle
 
 ![image](1.2.826.0.1.3680043.2.135.736878.69948300.7.1567233981.773.34_0001_000003_15672339890011_new.jpg)
-![image]([截圖 2025-04-06 下午8.05.03.png](https://github.com/medkd/Spine-Pose-Estimation/blob/main/%E6%88%AA%E5%9C%96%202025-04-06%20%E4%B8%8B%E5%8D%888.05.03.png?raw=true))
+![image](# Spine-Pose-Estimation
+Cobb angle and LTV detection
+
+Using Stacked Hourglass Network for Vetebra boundary points detection, and then calculate Cobb angle based on derivatives
+
+
+1. 利用matlab定出vertebra的四個角座標，分別從T1-L5以及S1中點
+2. 將四個角座標取平均，訂出每個vertebra的重心
+3. 訓練Stacked hourglas model以偵測:
+   (1)各vertebra重心 --> 請參閱 vertebra_centrioid_model.ipynb
+   (2)各vetebra上下左右四個點座標 --> 請參閱vertebra_4_point_model.ipynb
+4. 訓練後使用Demo.ipynb即可自動判斷該Whole spine X ray的
+   (1) Last touched vetebra
+   (2) 各個curve的apex, upper endplate, lower endplate 以及對應的Cobb angle
+
+![image](1.2.826.0.1.3680043.2.135.736878.69948300.7.1567233981.773.34_0001_000003_15672339890011_new.jpg)
+![image](screeshot.jpg)
